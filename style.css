@@ -1,0 +1,27 @@
+html {
+    background: lightgray;
+}
+
+#openinginfo {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bolder;
+    color: royalblue;
+    font-family: sans-serif;
+}
+
+.opening {
+    font-family: sans-serif;
+    font-size: 36px;
+    color: purple;
+    text-align: center;
+    border: 9px solid red;
+    margin: auto;
+    width: 500px;
+    
+}
+
+#quizpicture {
+    align-items: center;
+    image-resolution: 200;
+}
