@@ -1,22 +1,92 @@
-html {
-    background: lightgray;
+/* all elements */
+
+/* widths and heights will be easier to style */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+/* defines the hue color to neutral, wrong, and correct with css variables and hsl colors (w3) */
+:root {
+--hue-neutral: 200;
+--hue-wrong: 0;  
+--hue-correct: 145;
 }
 
-#openinginfo {
-    font-size: 24px;
-    text-align: center;
-    font-weight: bolder;
-    color: royalblue;
-    font-family: sans-serif;
+/* setting body styles so quiz box is in the middle and background changes with correct and incorrect answers */
+/* using view width and height */
+body {
+    --hue: var(--hue-neutral);
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 25%);
 }
 
-#opening {
-    font-family: sans-serif;
-    font-size: 36px;
-    color: purple;
-    text-align: center;
-    border: 9px solid red;
-    margin: auto;
-    width: 500px;
-    
+body.correct {
+    --hue: var(--hue-correct);
 }
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 0 10px 3px ; /* x, y, blur, shadow */
+}
+
+/* creates two columns with the grid temp repeat */
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* all btns */
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+/* black color allows user to see on when correct answer appears. */
+.btn.correct {
+    --hue: var(--hue-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hides next button */
