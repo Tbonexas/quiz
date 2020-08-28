@@ -1,6 +1,7 @@
 html {
-    background-position: center, repeat none;
-    background-image: url(https://www.teahub.io/photos/full/81-818395_quiz-wallpapers-color-neon-backgrounds.jpg);
+    background-color: black;
+    /* background-position: center, repeat none; */
+    /* background-image: url(https://www.teahub.io/photos/full/81-818395_quiz-wallpapers-color-neon-backgrounds.jpg); */
 }
 
 body{
