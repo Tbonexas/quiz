@@ -1,19 +1,19 @@
 (function(){
   function buildQuiz(){
-    // variable to store the HTML output
+    // storing html output // 
     const output = [];
 
-    // for each question...
+    // for all the questions
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
 
-        // variable to store the list of possible answers
+        // store answers // 
         const answers = [];
 
-        // and for each available answer...
+        // for the answers available // 
         for(letter in currentQuestion.answers){
 
-          // ...add an HTML radio button
+          // added a radio button ref: w3schools // 
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -23,7 +23,7 @@
           );
         }
 
-        // add this question and its answers to the output
+        // question and its answers to the output // 
         output.push(
           `<div class="question"> ${currentQuestion.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
@@ -31,19 +31,19 @@
       }
     );
 
-    // finally combine our output list into one string of HTML and put it on the page
+    // output list into 1 string of HTML to display // 
     quizContainer.innerHTML = output.join('');
   }
 
   function showResults(){
 
-    // gather answer containers from our quiz
+    // collecting answers from containers // 
     const answerContainers = quizContainer.querySelectorAll('.answers');
 
-    // keep track of user's answers
+    // user score // 
     let numCorrect = 0;
 
-    // for each question...
+    // all questions // 
     myQuestions.forEach( (currentQuestion, questionNumber) => {
 
       // find selected answer
@@ -51,7 +51,7 @@
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-      // if answer is correct
+      // if / else statements with color styling // 
       if(userAnswer === currentQuestion.correctAnswer){
         // add to the number of correct answers
         numCorrect++;
@@ -66,13 +66,15 @@
       }
     });
 
-    // show number of correct answers out of total
+    // correct answers output
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
   }
 
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
+
+  // Question for the quiz //
   const myQuestions = [
     {
       question: "Who invented Javascript?",
@@ -136,9 +138,9 @@
   },
 ];
 
-  // Kick things off
+  // starting the quiz //
   buildQuiz();
 
-  // Event listeners
+  // submit button click event // 
   submitButton.addEventListener('click', showResults);
 })();
