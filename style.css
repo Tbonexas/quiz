@@ -1,92 +1,45 @@
-/* all elements */
-
-/* widths and heights will be easier to style */
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-/* defines the hue color to neutral, wrong, and correct with css variables and hsl colors (w3) */
-:root {
---hue-neutral: 200;
---hue-wrong: 0;  
---hue-correct: 145;
+html {
+    background-position: center, repeat none;
+    background-image: url(https://www.teahub.io/photos/full/81-818395_quiz-wallpapers-color-neon-backgrounds.jpg);
 }
 
-/* setting body styles so quiz box is in the middle and background changes with correct and incorrect answers */
-/* using view width and height */
-body {
-    --hue: var(--hue-neutral);
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(var(--hue), 100%, 25%);
+body{
+	font-size: 24px;
+	font-family: 'Cormorant', serif;
+    color: #333;
+    border: 5px solid gray;
+    text-align: center;
+    background-color: darkgray;
+    padding: 5px;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-body.correct {
-    --hue: var(--hue-correct);
-}
-
-body.wrong {
-    --hue: var(--hue-wrong);
-}
-
-.container {
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 12px;
-    box-shadow: 0 0 10px 3px ; /* x, y, blur, shadow */
-}
-
-/* creates two columns with the grid temp repeat */
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
-}
-
-/* all btns */
-.btn {
-    --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: white;
-    outline: none;
-}
-
-.btn:hover {
-    border-color: black;
-}
-
-/* black color allows user to see on when correct answer appears. */
-.btn.correct {
-    --hue: var(--hue-correct);
-    color: black;
-}
-
-.btn.wrong {
-    --hue: var(--hue-wrong);
-}
-
-.start-btn, .next-btn {
-    font-size: 1.5rem;
+.question{
     font-weight: bold;
-    padding: 10px 20px;
+    color: rgb(0, 37, 250);
+    padding: 2px;
+    
+    
 }
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.answers {
+  margin-bottom: 20px;
+  color: black;
 }
-
-/* hides next button */
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: 'Cormorant', serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}

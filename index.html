@@ -6,28 +6,16 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Java Quiz!</title>
         <!--Links to css java and google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <!--defer the script to run after the body ref w3 schools-->
-        <script defer src="java.js"></script>
-    
+        <script src="script.js"></script>
     </head>
 <body>
-    <section class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Questions</div>
-            <div id="answer-btn" class="btn-grid">
-                <button class="btn">Choice A</button>
-                <button class="btn">Choice B</button>
-                <button class="btn">Choice C</button>
-                <button class="btn">Choice D</button>
-            </div>
-        <div class="controls">
-           <button id="start-btn" class="start-btn btn">Start Quiz</button>
-           <button id="next-btn" class="next-btn btn hide">Next Question</button> 
-        </div>    
+<div id="quiz"></div>
+<button id="submit">Submit Answers</button>
+<div id="score"></div>
 
-        </div>
-    </section>
+<script src="script.js"></script>
 </body>
 
 </html>
