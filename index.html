@@ -1,37 +1,54 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Java Quiz!</title>
-        <!--Links to css java and google fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz By Todd Wayment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
-    <h1>Coding Quiz by Todd Wayment</h1>
-    <div class="quiz-container">
-      <div id="quiz"></div>
+    <div class="container">
+
+        <div id="startpage">
+            <h2>The Ultimate Rick and Morty Quiz</h2>
+            <h2>You will have 45 seconds to complete this quiz!</h2>
+            <section id="btnborder">
+        <button id="startbtn">Click To Begin!</button>
+        <button id="startPageHighscore" onclick="showHighscore()">Rankings</button>
+            </section>
+        </div>
+
+        <div id="quiz">
+            <div id="timer">Time Remaining: </div>
+                <div id="questions"><p>Questions Placeholder</p></div>
+                    <button id="a" onclick="checkAnswer('a')">A</button>
+                    <button id="b" onclick="checkAnswer('b')">B</button>
+                    <button id="c" onclick="checkAnswer('c')">C</button>
+                    <button id="d" onclick="checkAnswer('d')">D</button>
+                <div id="result"></div>
+        </div>
+        <div id="gameover">
+
+            <div id="finalScore"></div>
+            <input type="text" size = "40" placeholder="Enter you initials for high score" name="intials" id="initials"/>
+            <button id="submitScore">Submit Score</button>
+        </div>
+        <div id=highscoreContainer>
+        <div id="high-scorePage">
+            <div id="highscore-header">
+                <h3>Initials</h3>
+                <h3>Score</h3>
+            </div>
+            <div id = "highscore-initials"></div>
+            <div id = "highscore-score"></div>
+        </div>
+        <div id="endGameBtns">
+            <button id="playAgain" onclick="replayQuiz()">Try Again</button>
+            <button id="clearHighscore" onclick="clearScore()">Clear Scores</button>
+        </div>
     </div>
-    <button id="previous">Back</button>
-    <button id="next">Next</button>
-    <button id="submit">Submit</button>
-    <div id="results"></div>
-
-
-    <!-- Timer below the buttons for quiz-->
-    <div id="clockdiv">
-        <div>
-          <span class="minutes"></span>
-          <div class="smalltext">Minutes</div>
-        </div>
-        <div>
-          <span class="seconds"></span>
-          <div class="smalltext">Seconds</div>
-        </div>
-      </div>
-<script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>

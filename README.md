@@ -1,6 +1,7 @@
-# quiz
-javascript quiz week 4 homework.
 
-Ref: W3Schools for hover, html radio buttons, and navigation JS
+Week 4 Homework
 
-Link: tbonexas.github.io/quiz 
+I made a rick and morty quiz. I had a very hard time working with the high score page etc  but I managed to make it work. 
+
+Link: tbonexas.github.io/quiz
+
