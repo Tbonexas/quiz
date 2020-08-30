@@ -1,5 +1,5 @@
 :root{
-  background-image: url(https://wallpaperaccess.com/full/831751.png);
+  background-image: url(https://external-preview.redd.it/yTBwajrfDAa495OL9wk2jLhRSlb5jhTgUHSUzdOICCM.jpg?auto=webp&s=840d60d4055beb2368209d8f4bbff10ba446cb1f);
   
   }
   
@@ -167,7 +167,7 @@
 
   @media only screen and (max-width: 763px) {
     :root{
-        background-image: url(https://wallpaperaccess.com/full/831751.png);
+        background-image: url(https://external-preview.redd.it/yTBwajrfDAa495OL9wk2jLhRSlb5jhTgUHSUzdOICCM.jpg?auto=webp&s=840d60d4055beb2368209d8f4bbff10ba446cb1f);
         
         }
         
@@ -330,163 +330,4 @@
   }
 
 
-  @media only screen and (max-width: 450px) {
-    
-        
-        li{
-            padding-bottom: 1px;
-            color: white;
-            text-shadow: 1.5px 1px 3px black;
-            list-style-type: none;
-        }
-        
-        p{
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            font-family: 'Londrina Solid', cursive;
-            text-shadow: 1.5px 1px 3px green;
-        
-        }
-        h2{
-            font-family: 'Londrina Solid', cursive;
-            font-size: 32px;
-            text-shadow: 2.5px 2px 5px black;
-            margin-top: -.5rem;
-        }
-        input{
-            text-align: center;
-        }
-        
-        #btnborder {
-            border: 1px transparent;
-            padding: 1px;
-        }
-        
-        .container {
-            padding: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 80rem;
-            margin: 0 auto;
-          }
-        
-          button {
-            display: inline-block;
-            font-family: sans-serif;
-            background-color: lightgreen;
-            border-radius: 5px;
-            border: 3px double black;
-            color: black;
-            text-align: center;
-            font-size: 16px;
-            padding: 10px;
-            width: 100px;
-            margin-top: 1.5px;
-          }
-        
-          button:hover{
-              box-shadow: 4px 3px 6px black;
-          }
-        
-        #startpage{
-            margin-top: 75px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        #timer{
-            font-family: sans-serif;
-            background-color: lightgreen;
-            color: black;
-            font-size: x-large;
-            text-shadow: .5px .5px yellow;
-            text-align: center;
-        }
-        #quiz {
-            margin-top: 75px;
-            display: none;
-        }
-        
-        #result {
-            display: none;
-        }
-        
-        #gameover {
-            font-family: 'Londrina Solid', cursive;
-            text-shadow: 2.5px 2px 5px black;
-            margin-top: 75px;
-            color: white;
-            text-align: center;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        #highScore{
-            height: 0.5rem;
-            border: groove 2px;
-        }
-        
-        #high-scorePage{
-            margin-top: 75px;
-            display: none;
-            width: 100%;
-            border: solid;
-            border-color: white;
-            border-bottom-style: groove;
-            padding-bottom: .3rem;
-            background: black;
-        }
-        
-        #highscore-header{
-            display:flex;
-            justify-content: center;
-            border-bottom-style: outset;
-            margin-bottom: .5rem;
-            background-color: lightgreen;
-            color: black;
-            font-family: sans-serif;
-        }
-        #highscoreContainer{
-            height: 100%;
-            width: 100%;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        #initials{
-            margin: .5rem;
-            height: 0.75rem;
-        }
-        
-        #highscore-initials{
-            display: inline-block;
-            padding-left: 5.5rem;
-            font-family: sans-serif;
-            font-weight: bold;
-        }
-        
-        #highscore-score{
-            float: right;
-            padding-right: 4.75rem;
-            font-family: sans-serif;
-            font-weight: bold;
-        }
-        
-        #finalScore{
-            padding-bottom: 0.3rem;
-            font-size: x-large;
-            font-family: sans-serif;
-            font-weight: bold;
-        }
-        
-        #endGameBtns{
-            display: none;
-        }
-  }
+  

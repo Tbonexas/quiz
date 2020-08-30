@@ -14,13 +14,18 @@ var highscoreDisplayName = document.getElementById("highscore-initials");
 var endGameBtns = document.getElementById("endGameBtns");
 var submitScoreBtn = document.getElementById("submitScore");
 var highscoreDisplayScore = document.getElementById("highscore-score");
+
+
+
+
 var buttonA = document.getElementById("a");
 var buttonB = document.getElementById("b");
 var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 
-// Rick and Morty Quiz Questions
-var quizQuestions = [{
+// Rick and Morty Quiz Question index
+var quizQuestions = [
+    {
     question: "What is Ricks Last name?",
     choiceA: "Jacobs",
     choiceB: "Stevens",
