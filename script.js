@@ -17,7 +17,7 @@ var highscoreDisplayScore = document.getElementById("highscore-score");
 
 
 
-
+// Choice button IDs //
 var buttonA = document.getElementById("a");
 var buttonB = document.getElementById("b");
 var buttonC = document.getElementById("c");
@@ -122,7 +122,7 @@ var quizQuestions = [
    
     
 ];
-// Other global variables
+// Other variables (global) //
 var finalQuestionIndex = quizQuestions.length;
 var currentQuestionIndex = 0;
 var timeLeft = 45;
@@ -130,7 +130,7 @@ var timerInterval;
 var score = 0;
 var correct;
 
-// This function cycles through the object array containing the quiz questions to generate the questions and answers.
+// This function goes through the array containing the quiz questions to generate the questions and answers. //
 function generateQuizQuestion(){
     gameoverDiv.style.display = "none";
     if (currentQuestionIndex === finalQuestionIndex){
@@ -144,7 +144,7 @@ function generateQuizQuestion(){
     buttonD.innerHTML = currentQuestion.choiceD;
 };
 
-// Start Quiz function starts the TimeRanges, hides the start button, and displays the first quiz question.
+// Start Quiz function, Timer, hides start button, and displays first question. //
 function startQuiz(){
     gameoverDiv.style.display = "none";
     startQuizDiv.style.display = "none";
@@ -162,24 +162,24 @@ function startQuiz(){
       }, 1000);
     quizBody.style.display = "block";
 }
-// This function is the end page screen that displays your score after either completeing the quiz or upon timer run out
+// This function shows end of the quiz or if time runs out // 
 function showScore(){
     quizBody.style.display = "none"
     gameoverDiv.style.display = "flex";
     clearInterval(timerInterval);
     highscoreInputName.value = "";
-    finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestions.length + " correct!";
+    finalScoreEl.innerHTML = "Whoa, look! " + score + " out of " + quizQuestions.length + " correct!";
 }
 
-// On click of the submit button, we run the function highscore that saves and stringifies the array of high scores already saved in local stoage
-// as well as pushing the new user name and score into the array we are saving in local storage. Then it runs the function to show high scores.
+// On click of the submit button, shows array of high scores already saved in local stoage and pushes the new user name and score into local storage. Then shows high scores. // 
 submitScoreBtn.addEventListener("click", function highscore(){
     
-    
+    // this is an alert if you do not add initials to the quiz upon completion// 
     if(highscoreInputName.value === "") {
         alert("Whoa! No initials? Who are you?");
         return false;
     }else{
+        // variables for user scores //
         var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
         var currentUser = highscoreInputName.value.trim();
         var currentHighscore = {
@@ -200,7 +200,7 @@ submitScoreBtn.addEventListener("click", function highscore(){
     
 });
 
-// This function clears the list for the high scores and generates a new high score list from local storage
+// This function clears high scores and generates a new high score list from local storage // // ref w3 for function //
 function generateHighscores(){
     highscoreDisplayName.innerHTML = "";
     highscoreDisplayScore.innerHTML = "";
@@ -215,7 +215,7 @@ function generateHighscores(){
     }
 }
 
-// This function displays the high scores page while hiding all of the other pages from 
+// displays the high scores and hides all of the other //
 function showHighscore(){
     startQuizDiv.style.display = "none"
     gameoverDiv.style.display = "none";
@@ -226,14 +226,14 @@ function showHighscore(){
     generateHighscores();
 }
 
-// This function clears the local storage of the high scores as well as clearing the text from the high score board
+// This function clears the local storage of the high scores and text from the high score board. //
 function clearScore(){
     window.localStorage.clear();
     highscoreDisplayName.textContent = "";
     highscoreDisplayScore.textContent = "";
 }
 
-// This function sets all the variables back to their original values and shows the home page to enable replay of the quiz
+// This sets all the variables back to their original values and shows the home page. //
 function replayQuiz(){
     highscoreContainer.style.display = "none";
     gameoverDiv.style.display = "none";
@@ -263,5 +263,5 @@ function checkAnswer(answer){
     }
 }
 
-// This button starts the quiz!
+// This button starts quiz. //
 startQuizButton.addEventListener("click",startQuiz);
